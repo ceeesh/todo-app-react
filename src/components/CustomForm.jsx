@@ -17,14 +17,14 @@ const CustomForm = ({ addTask }) => {
 
   return (
     <form 
-    className=''
+    className="flex flex-col justify-center text-left container mx-auto w-6/12"
     onSubmit={handleFormSubmit}
     >
         <div>
             <input
             type="text"
             id="task"
-            className=""
+            className="w-9/12 m-3 rounded-md p-2.5"
             value={task}
             onInput={(e) => setTask(e.target.value)}
             required
@@ -32,16 +32,16 @@ const CustomForm = ({ addTask }) => {
             maxLength={60}
             placeholder="Enter Task"
             />
-            <label 
+            {/* <label 
             htmlFor="task"
             className=""
-            >Enter Task</label>
+            >Enter Task</label> */}
             <button
-            className=""
+            className="w-auto bg-violet-600 p-5 rounded-md"
             aria-label="Add Task"
             type="submit"
             >
-            <PlusIcon className="h-6 w-6 text-blue-500"/>
+            <PlusIcon className="h-6 w-9 text-blue-500"/>
             </button>
         </div>
         

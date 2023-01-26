@@ -9,7 +9,7 @@ const TaskItem = ({task}) => {
     }
 
   return (
-    <li>
+    <li className="border mb-4 rounded-md border-black ">
         <div>
         <input
         type="checkbox"
@@ -20,6 +20,7 @@ const TaskItem = ({task}) => {
         />
         <label 
         htmlFor={task.id}
+        className=""
         >
             {task.name}
         <p>
@@ -38,13 +39,13 @@ const TaskItem = ({task}) => {
             aria-label={`Update${task.name} Task`}
             // onClick={}
             >
-<p>
+            <p>
             <PencilIcon 
             strokeWidth={2} 
             width={24}
             height={24}
             />
-        </p>
+            </p>
             </button>
         </div>
     </li>

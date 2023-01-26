@@ -10,7 +10,8 @@ function App() {
   }
 
   return (
-    <div className="text-3xl font-bold underline">
+    <div className="text-3xl font-bold">
+      <header className="flex justify-center">My Task List</header>
        <CustomForm addTask={addTask}/>
        {tasks && <TaskList tasks={tasks}/>}
     </div>
