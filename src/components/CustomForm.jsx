@@ -17,14 +17,14 @@ const CustomForm = ({ addTask }) => {
 
   return (
     <form 
-    className="flex flex-col justify-center text-left container mx-auto w-6/12"
+    className="flex flex-col justify-center text-left container mx-auto w-full"
     onSubmit={handleFormSubmit}
     >
-        <div>
+        <div className="flex justify-center">
             <input
             type="text"
             id="task"
-            className="w-9/12 m-3 rounded-md p-2.5"
+            className="w-4/12 m-3 rounded-md p-2.5 "
             value={task}
             onInput={(e) => setTask(e.target.value)}
             required
@@ -41,7 +41,7 @@ const CustomForm = ({ addTask }) => {
             aria-label="Add Task"
             type="submit"
             >
-            <PlusIcon className="h-6 w-9 text-blue-500"/>
+            <PlusIcon className="w-9 text-blue-500"/>
             </button>
         </div>
         

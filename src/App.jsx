@@ -9,11 +9,27 @@ function App() {
     setTasks(prevState => [...prevState, task])
   }
 
+  const deleteTask = (id) => {
+    setTasks(prevState => prevState.filter(t => t.id !== id))
+  }
+
+  const toggleTask = (id) => {
+    setTasks(prevState => prevState.map(t => (
+      t.id === id ? {... t, checked: !t.checked } : t
+    )))
+  }
+
   return (
     <div className="text-3xl font-bold">
       <header className="flex justify-center">My Task List</header>
        <CustomForm addTask={addTask}/>
-       {tasks && <TaskList tasks={tasks}/>}
+       {tasks && (
+       <TaskList 
+       tasks={tasks}
+       deleteTask={deleteTask}
+       toggleTask={toggleTask}
+       />
+      )}
     </div>
   )
 }
