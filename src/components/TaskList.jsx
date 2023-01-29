@@ -1,7 +1,7 @@
 import TaskItem from './TaskItem';
 
 
-const TaskList = ({tasks, deleteTask, toggleTask}) => {
+const TaskList = ({tasks, deleteTask, toggleTask, enterEditMode}) => {
   return (
     <ul className="flex flex-col justify-center text-left container mx-auto w-6/12 ">
         {
@@ -12,6 +12,7 @@ const TaskList = ({tasks, deleteTask, toggleTask}) => {
                 task={task}
                 deleteTask={deleteTask}
                 toggleTask={toggleTask}
+                enterEditMode={enterEditMode}
                 />
             ))
         }
