@@ -3,7 +3,7 @@ import TaskItem from './TaskItem';
 
 const TaskList = ({tasks, deleteTask, toggleTask, enterEditMode}) => {
   return (
-    <ul className="flex flex-col justify-center text-left container mx-auto w-6/12 ">
+    <ul className="flex flex-col justify-center text-left container mx-auto w-24 ">
         {
             tasks.sort((a, b) => b.id - a.id).map(task => 
               (

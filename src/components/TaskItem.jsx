@@ -10,7 +10,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
     }
 
   return (
-    <li className="border mb-4 rounded-md border-black flex flex-row justify-between ">
+    <li className="border mb-4 rounded-md border-whiteblack flex flex-row justify-between items-center">
         <div className=''>
         <input
         type="checkbox"
@@ -41,7 +41,8 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             onClick={() => enterEditMode(task)}
             >
             <p>
-            <PencilSquareIcon 
+            <PencilSquareIcon
+            color='white'
             width={24}
             height={24}
             />
@@ -55,6 +56,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             >
             <p>
             <TrashIcon 
+            color='white'
             width={24}
             height={24}
             />

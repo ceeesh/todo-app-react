@@ -17,14 +17,15 @@ const CustomForm = ({ addTask }) => {
 
   return (
     <form 
-    className="flex flex-col justify-center text-left container mx-auto w-full"
+    className="flex flex-col justify-center text-left container mx-auto w-full mb-5 my-32"
     onSubmit={handleFormSubmit}
     >
+        <header className="flex justify-center">My Task List</header>
         <div className="flex justify-center">
             <input
             type="text"
             id="task"
-            className="w-4/12 m-3 rounded-md p-2.5 "
+            className="w-3/12 m-3 rounded-md p-2.5 "
             value={task}
             onInput={(e) => setTask(e.target.value)}
             required

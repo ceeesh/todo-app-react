@@ -1,6 +1,7 @@
 import { useState } from "react"
 import CustomForm from "./components/CustomForm"
 import EditForm from "./components/EditForm";
+import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import useLocalStorage from "./hooks/useLocalStorage";
 
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <div className="text-3xl font-bold">
-      <header className="flex justify-center">My Task List</header>
+            <Header/>
       {
         isEditing && (
           <EditForm 
@@ -54,7 +55,6 @@ function App() {
           />
         )
       }
-      
        <CustomForm addTask={addTask}/>
        {tasks && (
        <TaskList 
