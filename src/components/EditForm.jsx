@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { CheckIcon } from '@heroicons/react/24/solid'
-import { useEffect } from 'react'
+import { TasksContext } from '../context/tasksContext'
 
-
-const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
+// editedTask, updateTask, closeEditMode
+const EditForm = ({}) => {
+    const { editedTask, updateTask, closeEditMode } = useContext(TasksContext)
     const [updatedTaskName, setUpdatedTaskName] = useState(editedTask.name)
 
     useEffect(() => {

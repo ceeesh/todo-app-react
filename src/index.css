@@ -11,10 +11,11 @@
 }
 
 label {
-  color: white;
+  color: black;
 }
 
 body {
     min-height: 100vh;
-    background-color: rgb(15 23 42);
+    /* background-color: rgb(15 23 42); */
+    background-color: rgb(242, 243, 242);
 }
