@@ -1,7 +1,10 @@
+import { TasksContext } from '../context/tasksContext';
 import TaskItem from './TaskItem';
+import { useContext } from 'react';
 
 
-const TaskList = ({tasks, deleteTask, toggleTask, enterEditMode}) => {
+const TaskList = ({}) => {
+  const { tasks, deleteTask, toggleTask, enterEditMode} = useContext(TasksContext)
   return (
     <ul className="flex flex-col justify-center text-left container mx-auto w-24 ">
         {

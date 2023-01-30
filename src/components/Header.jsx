@@ -6,7 +6,7 @@ const Header = () => {
 
     const myStyle = {
         backgroundImage: 
-        `url(${night})`,
+        `url(${morning})`,
         height:'450px',
         position: 'absolute',
         top: '-15px',

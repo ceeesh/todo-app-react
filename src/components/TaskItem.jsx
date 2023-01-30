@@ -42,7 +42,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             >
             <p>
             <PencilSquareIcon
-            color='white'
+            color='black'
             width={24}
             height={24}
             />
@@ -56,7 +56,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             >
             <p>
             <TrashIcon 
-            color='white'
+            color='black'
             width={24}
             height={24}
             />

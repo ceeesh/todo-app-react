@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { PlusIcon } from '@heroicons/react/24/solid'
+import { TasksContext } from '../context/tasksContext'
 
 
-const CustomForm = ({ addTask }) => {
+const CustomForm = ({}) => {
     const [task, setTask] = useState("")
+    const { addTask } = useContext(TasksContext)
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
