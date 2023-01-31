@@ -25,7 +25,7 @@ const Header = () => {
     }
 
   return (
-    <div className='w-screen overflow-hidden' style={myStyle}>
+    <div className='w-full overflow-hidden' style={myStyle}>
         <div className='h-full w-full' style={imageStyle}></div>
     </div>
   )

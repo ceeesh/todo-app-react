@@ -6,7 +6,16 @@ import TaskList from "./components/TaskList";
 import { TasksContext, TasksContextProvider } from "./context/tasksContext";
 
 function App() {
- const { isEditing, tasks} = useContext(TasksContext)
+ const { isEditing, tasks, theme} = useContext(TasksContext)
+
+ useEffect(() => {
+  if(theme === 'light') {
+    document.body.style.backgroundColor ='rgb(242, 243, 242)';
+   }else {
+    document.body.style.backgroundColor = 'rgb(15 23 42)';
+   }
+ },[theme])
+ 
 
   return (
     <div className="text-3xl font-bold">

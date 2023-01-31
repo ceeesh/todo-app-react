@@ -12,7 +12,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
     }
 
   return (
-    <li className={`border mb-4 rounded-md  flex flex-row justify-between items-center ${theme === 'light' ? 'border-black' : 'border-white'}`}>
+    <li className={`border mb-4 rounded-md  flex flex-row justify-between items-center ${theme === 'light' ? 'border-black' : 'border-white'} p-2`}>
         <div className=''>
         <input
         type="checkbox"
@@ -23,10 +23,10 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
         />
         <label 
         htmlFor={task.id}
-        className=""
+        className={`${theme === 'light' ? 'text-black' : 'text-white'} ${isChecked ? 'line-through' : null} ${theme === 'light' ? 'decoration-white' : 'decoration-black'} p-2`}
         >
             {task.name}
-        <p>
+        <p className="inline-block">
             <CheckIcon 
             strokeWidth={2} 
             width={24}
@@ -44,7 +44,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             >
             <p>
             <PencilSquareIcon
-            color='black'
+            color={`${theme === 'light' ? 'black' : 'white'}`}
             width={24}
             height={24}
             />
@@ -58,7 +58,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
             >
             <p>
             <TrashIcon 
-            color='black'
+            color={`${theme === 'light' ? 'black' : 'white'}`}
             width={24}
             height={24}
             />

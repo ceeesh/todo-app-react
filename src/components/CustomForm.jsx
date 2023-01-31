@@ -30,7 +30,7 @@ const themeUpdate = () => {
     onSubmit={handleFormSubmit}
     >
         <header className={`flex justify-center ${theme === 'light' ? 'text-black' : 'text-white'}`}>My Task List</header>
-        <a href="#" className='flex justify-center ml-72 mb-4' onClick={themeUpdate} >
+        <a href="#" className='self-center ml-72 mb-4 w-12' onClick={themeUpdate} >
             <img className='w-8' src={`${theme === 'light' ? darkMode : lightMode}`}/>
             </a>
         <div className="flex justify-center">
@@ -50,7 +50,7 @@ const themeUpdate = () => {
             className=""
             >Enter Task</label> */}
             <button
-            className="w-auto bg-violet-600 p-5 rounded-md"
+            className={`w-auto p-5 rounded-md ${theme === 'light' ? 'bg-black' : 'bg-violet-600'}`}
             aria-label="Add Task"
             type="submit"
             >
