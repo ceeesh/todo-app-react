@@ -1,11 +1,14 @@
 import { useState, useContext } from 'react'
 import { PlusIcon } from '@heroicons/react/24/solid'
 import { TasksContext } from '../context/tasksContext'
+import darkMode from '../assets/moon.png'
+import lightMode from '../assets/brightness.png'
+import useLocalStorage from '../hooks/useLocalStorage'
 
 
 const CustomForm = ({}) => {
     const [task, setTask] = useState("")
-    const { addTask } = useContext(TasksContext)
+    const { addTask, theme, setTheme } = useContext(TasksContext)
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -17,12 +20,19 @@ const CustomForm = ({}) => {
         setTask("")
     }
 
+const themeUpdate = () => {
+    setTheme(prevState => prevState === 'light' ? 'dark' : 'light')
+} 
+
   return (
     <form 
     className="flex flex-col justify-center text-left container mx-auto w-full mb-5 my-32"
     onSubmit={handleFormSubmit}
     >
-        <header className="flex justify-center">My Task List</header>
+        <header className={`flex justify-center ${theme === 'light' ? 'text-black' : 'text-white'}`}>My Task List</header>
+        <a href="#" className='flex justify-center ml-72 mb-4' onClick={themeUpdate} >
+            <img className='w-8' src={`${theme === 'light' ? darkMode : lightMode}`}/>
+            </a>
         <div className="flex justify-center">
             <input
             type="text"

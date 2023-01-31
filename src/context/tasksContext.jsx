@@ -8,6 +8,11 @@ export const TasksContextProvider = ({children}) => {
   const [editedTask, setEditedTask] = useState(null);
   const [isEditing, setIsEditing ] = useState(false);
   const [previousFocusEl, setPreviousFocusEl] = useState(null);
+  const [theme, setTheme] = useLocalStorage('theme', 'light')
+
+  // useState(
+  //   localStorage.getItem('theme') === null ? "dark" : JSON.parse(localStorage.getItem('theme'))
+  //   );
 
   const addTask = (task) => {
     setTasks(prevState => [...prevState, task])
@@ -41,10 +46,6 @@ export const TasksContextProvider = ({children}) => {
     setPreviousFocusEl(document.activeElement);
   }
 
-  useEffect(() => {
-    console.log(tasks)
-  },[])
-
   return (
     <TasksContext.Provider value={{ 
       tasks, 
@@ -60,7 +61,9 @@ export const TasksContextProvider = ({children}) => {
       toggleTask, 
       updateTask,
       closeEditMode,
-      enterEditMode
+      enterEditMode,
+      theme, 
+      setTheme
       }}>
         {children}
     </TasksContext.Provider>

@@ -1,12 +1,15 @@
-import React from 'react'
+import { useContext } from 'react'
 import morning from '../assets/city-morning.jpg'
 import night from '../assets/city-night.jpg'
+import { TasksContext } from '../context/tasksContext'
 
 const Header = () => {
 
+  const { theme } = useContext(TasksContext)
+
     const myStyle = {
         backgroundImage: 
-        `url(${morning})`,
+        `${theme === 'light' ? `url(${morning})` : `url(${night})`}`,
         height:'450px',
         position: 'absolute',
         top: '-15px',

@@ -1,8 +1,10 @@
 import { CheckIcon, PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { TasksContext } from '../context/tasksContext';
 
 const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
     const [isChecked, setIsChecked ] = useState(task.checked);
+    const { theme } = useContext(TasksContext)
 
     const handleCheckboxChange = (e) => {
         setIsChecked(!isChecked)
@@ -10,7 +12,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
     }
 
   return (
-    <li className="border mb-4 rounded-md border-whiteblack flex flex-row justify-between items-center">
+    <li className={`border mb-4 rounded-md  flex flex-row justify-between items-center ${theme === 'light' ? 'border-black' : 'border-white'}`}>
         <div className=''>
         <input
         type="checkbox"
