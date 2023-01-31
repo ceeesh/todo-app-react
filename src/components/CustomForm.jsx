@@ -26,7 +26,7 @@ const themeUpdate = () => {
 
   return (
     <form 
-    className="flex flex-col justify-center text-left container mx-auto w-full mb-5 my-32"
+    className="flex flex-col justify-center text-left container mx-auto w-full mb-5 my-32 overflow-hidden"
     onSubmit={handleFormSubmit}
     >
         <header className={`flex justify-center ${theme === 'light' ? 'text-black' : 'text-white'}`}>My Task List</header>

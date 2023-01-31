@@ -14,14 +14,13 @@ function App() {
    }else {
     document.body.style.backgroundColor = 'rgb(15 23 42)';
    }
- },[theme])
+ }, [theme])
  
 
   return (
     <div className="text-3xl font-bold">
             <Header/>
-      {
-        isEditing && (
+      { isEditing && (
           <EditForm/>
         )
       }

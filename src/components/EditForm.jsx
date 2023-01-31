@@ -4,7 +4,7 @@ import { TasksContext } from '../context/tasksContext'
 
 // editedTask, updateTask, closeEditMode
 const EditForm = ({}) => {
-    const { editedTask, updateTask, closeEditMode } = useContext(TasksContext)
+    const { editedTask, updateTask, closeEditMode, theme } = useContext(TasksContext)
     const [updatedTaskName, setUpdatedTaskName] = useState(editedTask.name)
 
     useEffect(() => {
@@ -29,9 +29,10 @@ const EditForm = ({}) => {
     role="dialog" 
     aria-labelledby="editTask" 
     onClick={(e) => {e.target === e.currentTarget && closeEditMode()}}
+    className='bg-opac w-full h-screen overflow-hidden absolute top-0'
     >
     <form 
-    className="flex flex-col justify-center text-left container mx-auto w-full"
+    className="flex flex-col justify-center text-left container mx-auto w-full z-50 mt-72"
     onSubmit={handleFormSubmit}
     >
         <div className="flex justify-center">
@@ -51,7 +52,7 @@ const EditForm = ({}) => {
             className=""
             >Enter Task</label> */}
             <button
-            className="w-auto bg-violet-600 p-5 rounded-md"
+            className={`w-auto p-5 rounded-md ${theme === 'light' ? 'bg-black' : 'bg-violet-600'}`}
             aria-label={`Confirm edited task to now read ${updatedTaskName}`}
             type="submit"
             >

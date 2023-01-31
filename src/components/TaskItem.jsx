@@ -23,7 +23,10 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
         />
         <label 
         htmlFor={task.id}
-        className={`${theme === 'light' ? 'text-black' : 'text-white'} ${isChecked ? 'line-through' : null} ${theme === 'light' ? 'decoration-white' : 'decoration-black'} p-2`}
+        className=
+        {`p-2 decoration-double ${theme === 'light' ? 'text-black' : 'text-white'} 
+        ${isChecked ? 'line-through' : null} 
+        ${theme === 'light' ? 'decoration-white' : 'decoration-black'}`}
         >
             {task.name}
         <p className="inline-block">
