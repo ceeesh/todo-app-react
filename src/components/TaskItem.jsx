@@ -20,6 +20,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
         name={task.name}
         id={task.id}
         onChange={handleCheckboxChange}
+        className='h-[20px] w-[20px]'
         />
         <label 
         htmlFor={task.id}

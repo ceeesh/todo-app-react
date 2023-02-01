@@ -17,10 +17,10 @@ module.exports = {
       },
       screens: {
         'phone': '390px',
-        // => @media (min-width: 640px) { ... }
+        // => @media (min-width: 390px) { ... }
   
         'laptop': '900px',
-        // => @media (min-width: 1024px) { ... }
+        // => @media (min-width: 900px) { ... }
   
         'desktop': '1280px',
         // => @media (min-width: 1280px) { ... }
