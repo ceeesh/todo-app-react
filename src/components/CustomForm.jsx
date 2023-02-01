@@ -29,15 +29,15 @@ const themeUpdate = () => {
     className="flex flex-col justify-center text-left container mx-auto w-full mb-5 my-32 overflow-hidden"
     onSubmit={handleFormSubmit}
     >
-        <header className={`flex justify-center ${theme === 'light' ? 'text-black' : 'text-white'}`}>My Task List</header>
-        <a href="#" className='self-center ml-72 mb-4 w-12' onClick={themeUpdate} >
+        <header className={`flex justify-center ${theme === 'light' ? 'text-black' : 'text-white'} phone:text-3xl laptop:text-5xl`}>My Task List</header>
+        <p href="" className='self-center ml-72 mb-4 w-12 icon' onClick={themeUpdate} >
             <img className='w-8' src={`${theme === 'light' ? darkMode : lightMode}`}/>
-            </a>
+            </p>
         <div className="flex justify-center">
             <input
             type="text"
             id="task"
-            className="w-3/12 m-3 rounded-md p-2.5 "
+            className="w-3/12 m-3 rounded-md p-2.5 placeholder:text-4xl phone:w-6/12 laptop:w-3/12"
             value={task}
             onInput={(e) => setTask(e.target.value)}
             required

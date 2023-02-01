@@ -12,7 +12,7 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
     }
 
   return (
-    <li className={`border mb-4 rounded-md  flex flex-row justify-between items-center ${theme === 'light' ? 'border-black' : 'border-white'} p-2`}>
+    <li className={`border mb-4 rounded-md flex flex-row justify-between items-center ${theme === 'light' ? 'border-black' : 'border-white'} p-2 min-w-max`}>
         <div className=''>
         <input
         type="checkbox"
@@ -26,16 +26,18 @@ const TaskItem = ({task, deleteTask, toggleTask, enterEditMode}) => {
         className=
         {`p-2 decoration-double ${theme === 'light' ? 'text-black' : 'text-white'} 
         ${isChecked ? 'line-through' : null} 
-        ${theme === 'light' ? 'decoration-white' : 'decoration-black'}`}
+        ${theme === 'light' ? 'decoration-white' : 'decoration-black'}
+        
+        `}
         >
             {task.name}
-        <p className="inline-block">
+        {/* <p className="inline-block">
             <CheckIcon 
             strokeWidth={2} 
             width={24}
             height={24}
             />
-        </p>
+        </p> */}
         </label>
         </div>
 

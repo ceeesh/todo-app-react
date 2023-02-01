@@ -11,6 +11,20 @@ module.exports = {
       colors: {
         'opac': 'rgba(24, 24, 27, 0.7);',
       },
+      backgroundImage: {
+        'morning': './src/assets/city-morning.jpg',
+        'night': "./src/assets/city-night.jpg",
+      },
+      screens: {
+        'phone': '390px',
+        // => @media (min-width: 640px) { ... }
+  
+        'laptop': '900px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      }
     },
   },
   plugins: [],

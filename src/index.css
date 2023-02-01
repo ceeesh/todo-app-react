@@ -19,3 +19,13 @@ body {
     /* background-color: rgb(15 23 42); 
     background-color: rgb(242, 243, 242);*/
 }
+
+input[type="checkbox"]{
+  padding: 150px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon {
+  cursor: pointer;
+}

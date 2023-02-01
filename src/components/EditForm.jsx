@@ -44,7 +44,7 @@ const EditForm = ({}) => {
             onInput={(e) => setUpdatedTaskName(e.target.value)}
             required
             autoFocus
-            maxLength={60}
+            maxLength={12}
             placeholder="Update Task"
             />
             {/* <label 
